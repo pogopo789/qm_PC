@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model version="5.2.1" links="0">
+ <framework name="qpcpp"/>
+ <package name="AOs" stereotype="0x02">
+  <class name="Sensors" superclass="qpcpp::QActive">
+   <attribute name="tim" type="QP::QTimeEvt" visibility="0x02" properties="0x00"/>
+   <attribute name="instance" type="Sensors" visibility="0x00" properties="0x01"/>
+   <attribute name="evt" type="QP::QEvt" visibility="0x00" properties="0x00"/>
+   <operation name="Sensors" type="" visibility="0x00" properties="0x00">
+    <code>  : QActive(Q_STATE_CAST(&amp;Sensors::initial)),
+    tim(this, TIMEOUT_SIG, 0U)</code>
+   </operation>
+   <statechart properties="0x02">
+    <initial target="../1">
+     <action>tim.armX(100,100);</action>
+     <initial_glyph conn="40,7,4,0,4">
+      <action box="0,-2,10,2"/>
+     </initial_glyph>
+    </initial>
+    <state name="GetData1">
+     <entry brief="PRINT TIME">std::cout&lt;&lt;&quot;Hi&quot;&lt;&lt;std::endl;
+instance.evt={NEXT_SIG};
+Sensors_ptr-&gt;postLIFO(&amp;instance.evt);</entry>
+     <tran trig="NEXT" target="../../2">
+      <tran_glyph conn="38,39,2,0,4">
+       <action box="2,1,10,2"/>
+      </tran_glyph>
+     </tran>
+     <state_glyph node="23,11,29,28">
+      <entry box="1,2,6,2"/>
+     </state_glyph>
+    </state>
+    <state name="GetData2">
+     <entry brief="PRINT TIME">std::cout&lt;&lt;&quot;Halo&quot;&lt;&lt;std::endl;</entry>
+     <tran trig="TIMEOUT" target="../../1">
+      <tran_glyph conn="53,55,1,1,13,-35,-14">
+       <action box="4,-5,10,2"/>
+      </tran_glyph>
+     </tran>
+     <state_glyph node="23,43,30,25">
+      <entry box="1,2,6,2"/>
+     </state_glyph>
+    </state>
+    <state_diagram size="87,80"/>
+   </statechart>
+  </class>
+  <attribute name="Sensors_ptr" type="QP::QActive * const" visibility="0x00" properties="0x00">
+   <code>= &amp;Sensors::instance;</code>
+  </attribute>
+ </package>
+ <directory name="./include">
+  <file name="bsp.h">
+   <text>#ifndef BSP_HPP
+#define BSP_HPP
+
+#include &quot;qpcpp.hpp&quot;  // QP/C++ framework API
+
+enum BlinkySignals {
+    TIMEOUT_SIG = QP::Q_USER_SIG, // offset the first signal
+    NEXT_SIG,
+    MAX_SIG
+};
+
+// a very simple Board Support Package (BSP) -------------------------------
+class BSP {
+public:
+    static void init(void);
+};
+
+#endif // BSP_HPP</text>
+  </file>
+  <file name="bsp.cpp">
+   <text>#include &quot;qpcpp.hpp&quot;  // QP/C++ framework API
+#include &quot;bsp.h&quot;    // Board Support Package interface
+#include &lt;iostream&gt;   // for cout/cerr
+#include &lt;cstdlib&gt;    // for exit()
+#include &lt;chrono&gt;
+
+using namespace std;
+using namespace QP;
+
+void BSP::init(void)   {
+    cout &lt;&lt; &quot;Simple Blinky example\nQP/C++ version: &quot;
+         &lt;&lt; QP_VERSION_STR
+         &lt;&lt; &quot;\nPress Ctrl-C to quit...&quot;
+         &lt;&lt; endl; // print QP version
+}
+
+// callback functions needed by the framework --------------------------------
+void QF::onStartup(void) {}
+void QF::onCleanup(void) {}
+void QF::onClockTick(void) {
+    QTimeEvt::TICK_X(0U, nullptr);  // perform the QF clock tick processing
+}
+void Q_onAssert(char const * const module, int loc) {
+    cerr &lt;&lt; &quot;Assertion failed in &quot; &lt;&lt;  module &lt;&lt; &quot;:&quot; &lt;&lt; loc &lt;&lt; endl;
+    exit(-1);
+}</text>
+  </file>
+  <file name="Sensors.cpp">
+   <text>#include &quot;qpcpp.hpp&quot;  // QP/C++ framework API
+#include &quot;bsp.h&quot;    // Board Support Package interface
+#include &lt;iostream&gt;   // for cout/cerr
+#include &lt;cstdlib&gt;    // for exit()
+#include &lt;chrono&gt;
+#include &quot;Sensors.h&quot;
+
+$define${AOs::Sensors_ptr}
+$define${AOs::Sensors}</text>
+  </file>
+  <file name="Sensors.h">
+   <text>#pragma once
+#include &lt;chrono&gt;
+
+$declare${AOs::Sensors_ptr}
+$declare${AOs::Sensors}</text>
+  </file>
+ </directory>
+</model>
