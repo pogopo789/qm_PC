@@ -123,6 +123,33 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+include/Monitor.o: include/Monitor.cpp.o
+
+.PHONY : include/Monitor.o
+
+# target to build an object file
+include/Monitor.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/Monitor.cpp.o
+.PHONY : include/Monitor.cpp.o
+
+include/Monitor.i: include/Monitor.cpp.i
+
+.PHONY : include/Monitor.i
+
+# target to preprocess a source file
+include/Monitor.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/Monitor.cpp.i
+.PHONY : include/Monitor.cpp.i
+
+include/Monitor.s: include/Monitor.cpp.s
+
+.PHONY : include/Monitor.s
+
+# target to generate assembly for a file
+include/Monitor.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/Monitor.cpp.s
+.PHONY : include/Monitor.cpp.s
+
 include/Sensors.o: include/Sensors.cpp.o
 
 .PHONY : include/Sensors.o
@@ -591,6 +618,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... main"
 	@echo "... edit_cache"
+	@echo "... include/Monitor.o"
+	@echo "... include/Monitor.i"
+	@echo "... include/Monitor.s"
 	@echo "... include/Sensors.o"
 	@echo "... include/Sensors.i"
 	@echo "... include/Sensors.s"

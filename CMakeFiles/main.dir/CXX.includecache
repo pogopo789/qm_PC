@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/home/jimmy/qm/include/Monitor.cpp
+qpcpp.hpp
+/home/jimmy/qm/include/qpcpp.hpp
+bsp.h
+/home/jimmy/qm/include/bsp.h
+iostream
+-
+cstdlib
+-
+chrono
+-
+Monitor.h
+/home/jimmy/qm/include/Monitor.h
+
+/home/jimmy/qm/include/Monitor.h
+chrono
+-
+
 /home/jimmy/qm/include/Sensors.cpp
 qpcpp.hpp
 /home/jimmy/qm/include/qpcpp.hpp
@@ -29,6 +47,10 @@ qpcpp.hpp
 /home/jimmy/qm/include/qpcpp.hpp
 bsp.h
 /home/jimmy/qm/include/bsp.h
+Sensors.h
+/home/jimmy/qm/include/Sensors.h
+Monitor.h
+/home/jimmy/qm/include/Monitor.h
 iostream
 -
 cstdlib
@@ -65,7 +87,7 @@ qmpool.hpp
 /home/jimmy/qm/include/qmpool.hpp
 qf.hpp
 /home/jimmy/qm/include/qf.hpp
-windows.h
+pthread.h
 -
 
 /home/jimmy/qm/include/qmpool.hpp
@@ -95,6 +117,10 @@ bsp.h
 /home/jimmy/qm/bsp.h
 Sensors.h
 /home/jimmy/qm/Sensors.h
+Monitor.h
+/home/jimmy/qm/Monitor.h
+iostream
+-
 
 /home/jimmy/qm/qf/qep_hsm.cpp
 qep_port.hpp
@@ -274,6 +300,10 @@ qs_pkg.hpp
 qs_dummy.hpp
 /home/jimmy/qm/qf/qs_dummy.hpp
 
+include/Monitor.h
+chrono
+-
+
 include/Sensors.h
 chrono
 -
@@ -309,7 +339,7 @@ qmpool.hpp
 include/qmpool.hpp
 qf.hpp
 include/qf.hpp
-windows.h
+pthread.h
 -
 
 include/qmpool.hpp

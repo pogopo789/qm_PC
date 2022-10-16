@@ -81,9 +81,33 @@ CMakeFiles/main.dir/main.cpp.o.provides: CMakeFiles/main.dir/main.cpp.o.requires
 CMakeFiles/main.dir/main.cpp.o.provides.build: CMakeFiles/main.dir/main.cpp.o
 
 
+CMakeFiles/main.dir/include/Monitor.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/include/Monitor.cpp.o: include/Monitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/include/Monitor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/include/Monitor.cpp.o -c /home/jimmy/qm/include/Monitor.cpp
+
+CMakeFiles/main.dir/include/Monitor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/include/Monitor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jimmy/qm/include/Monitor.cpp > CMakeFiles/main.dir/include/Monitor.cpp.i
+
+CMakeFiles/main.dir/include/Monitor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/include/Monitor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jimmy/qm/include/Monitor.cpp -o CMakeFiles/main.dir/include/Monitor.cpp.s
+
+CMakeFiles/main.dir/include/Monitor.cpp.o.requires:
+
+.PHONY : CMakeFiles/main.dir/include/Monitor.cpp.o.requires
+
+CMakeFiles/main.dir/include/Monitor.cpp.o.provides: CMakeFiles/main.dir/include/Monitor.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/Monitor.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/include/Monitor.cpp.o.provides
+
+CMakeFiles/main.dir/include/Monitor.cpp.o.provides.build: CMakeFiles/main.dir/include/Monitor.cpp.o
+
+
 CMakeFiles/main.dir/include/Sensors.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/include/Sensors.cpp.o: include/Sensors.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/include/Sensors.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/include/Sensors.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/include/Sensors.cpp.o -c /home/jimmy/qm/include/Sensors.cpp
 
 CMakeFiles/main.dir/include/Sensors.cpp.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/main.dir/include/Sensors.cpp.o.provides.build: CMakeFiles/main.dir/in
 
 CMakeFiles/main.dir/include/bsp.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/include/bsp.cpp.o: include/bsp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/include/bsp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/include/bsp.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/include/bsp.cpp.o -c /home/jimmy/qm/include/bsp.cpp
 
 CMakeFiles/main.dir/include/bsp.cpp.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/main.dir/include/bsp.cpp.o.provides.build: CMakeFiles/main.dir/includ
 
 CMakeFiles/main.dir/include/qstamp.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/include/qstamp.cpp.o: include/qstamp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/include/qstamp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/include/qstamp.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/include/qstamp.cpp.o -c /home/jimmy/qm/include/qstamp.cpp
 
 CMakeFiles/main.dir/include/qstamp.cpp.i: cmake_force
@@ -155,7 +179,7 @@ CMakeFiles/main.dir/include/qstamp.cpp.o.provides.build: CMakeFiles/main.dir/inc
 
 CMakeFiles/main.dir/qf/qep_hsm.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qep_hsm.cpp.o: qf/qep_hsm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/qf/qep_hsm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/qf/qep_hsm.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qep_hsm.cpp.o -c /home/jimmy/qm/qf/qep_hsm.cpp
 
 CMakeFiles/main.dir/qf/qep_hsm.cpp.i: cmake_force
@@ -179,7 +203,7 @@ CMakeFiles/main.dir/qf/qep_hsm.cpp.o.provides.build: CMakeFiles/main.dir/qf/qep_
 
 CMakeFiles/main.dir/qf/qep_msm.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qep_msm.cpp.o: qf/qep_msm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/qf/qep_msm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/qf/qep_msm.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qep_msm.cpp.o -c /home/jimmy/qm/qf/qep_msm.cpp
 
 CMakeFiles/main.dir/qf/qep_msm.cpp.i: cmake_force
@@ -203,7 +227,7 @@ CMakeFiles/main.dir/qf/qep_msm.cpp.o.provides.build: CMakeFiles/main.dir/qf/qep_
 
 CMakeFiles/main.dir/qf/qf_act.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qf_act.cpp.o: qf/qf_act.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/qf/qf_act.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/qf/qf_act.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qf_act.cpp.o -c /home/jimmy/qm/qf/qf_act.cpp
 
 CMakeFiles/main.dir/qf/qf_act.cpp.i: cmake_force
@@ -227,7 +251,7 @@ CMakeFiles/main.dir/qf/qf_act.cpp.o.provides.build: CMakeFiles/main.dir/qf/qf_ac
 
 CMakeFiles/main.dir/qf/qf_actq.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qf_actq.cpp.o: qf/qf_actq.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/qf/qf_actq.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/qf/qf_actq.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qf_actq.cpp.o -c /home/jimmy/qm/qf/qf_actq.cpp
 
 CMakeFiles/main.dir/qf/qf_actq.cpp.i: cmake_force
@@ -251,7 +275,7 @@ CMakeFiles/main.dir/qf/qf_actq.cpp.o.provides.build: CMakeFiles/main.dir/qf/qf_a
 
 CMakeFiles/main.dir/qf/qf_defer.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qf_defer.cpp.o: qf/qf_defer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/qf/qf_defer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/qf/qf_defer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qf_defer.cpp.o -c /home/jimmy/qm/qf/qf_defer.cpp
 
 CMakeFiles/main.dir/qf/qf_defer.cpp.i: cmake_force
@@ -275,7 +299,7 @@ CMakeFiles/main.dir/qf/qf_defer.cpp.o.provides.build: CMakeFiles/main.dir/qf/qf_
 
 CMakeFiles/main.dir/qf/qf_dyn.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qf_dyn.cpp.o: qf/qf_dyn.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/qf/qf_dyn.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/main.dir/qf/qf_dyn.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qf_dyn.cpp.o -c /home/jimmy/qm/qf/qf_dyn.cpp
 
 CMakeFiles/main.dir/qf/qf_dyn.cpp.i: cmake_force
@@ -299,7 +323,7 @@ CMakeFiles/main.dir/qf/qf_dyn.cpp.o.provides.build: CMakeFiles/main.dir/qf/qf_dy
 
 CMakeFiles/main.dir/qf/qf_mem.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qf_mem.cpp.o: qf/qf_mem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/main.dir/qf/qf_mem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/qf/qf_mem.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qf_mem.cpp.o -c /home/jimmy/qm/qf/qf_mem.cpp
 
 CMakeFiles/main.dir/qf/qf_mem.cpp.i: cmake_force
@@ -323,7 +347,7 @@ CMakeFiles/main.dir/qf/qf_mem.cpp.o.provides.build: CMakeFiles/main.dir/qf/qf_me
 
 CMakeFiles/main.dir/qf/qf_port.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qf_port.cpp.o: qf/qf_port.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/qf/qf_port.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/qf/qf_port.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qf_port.cpp.o -c /home/jimmy/qm/qf/qf_port.cpp
 
 CMakeFiles/main.dir/qf/qf_port.cpp.i: cmake_force
@@ -347,7 +371,7 @@ CMakeFiles/main.dir/qf/qf_port.cpp.o.provides.build: CMakeFiles/main.dir/qf/qf_p
 
 CMakeFiles/main.dir/qf/qf_ps.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qf_ps.cpp.o: qf/qf_ps.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/qf/qf_ps.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/qf/qf_ps.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qf_ps.cpp.o -c /home/jimmy/qm/qf/qf_ps.cpp
 
 CMakeFiles/main.dir/qf/qf_ps.cpp.i: cmake_force
@@ -371,7 +395,7 @@ CMakeFiles/main.dir/qf/qf_ps.cpp.o.provides.build: CMakeFiles/main.dir/qf/qf_ps.
 
 CMakeFiles/main.dir/qf/qf_qact.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qf_qact.cpp.o: qf/qf_qact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/qf/qf_qact.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/main.dir/qf/qf_qact.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qf_qact.cpp.o -c /home/jimmy/qm/qf/qf_qact.cpp
 
 CMakeFiles/main.dir/qf/qf_qact.cpp.i: cmake_force
@@ -395,7 +419,7 @@ CMakeFiles/main.dir/qf/qf_qact.cpp.o.provides.build: CMakeFiles/main.dir/qf/qf_q
 
 CMakeFiles/main.dir/qf/qf_qeq.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qf_qeq.cpp.o: qf/qf_qeq.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/main.dir/qf/qf_qeq.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/main.dir/qf/qf_qeq.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qf_qeq.cpp.o -c /home/jimmy/qm/qf/qf_qeq.cpp
 
 CMakeFiles/main.dir/qf/qf_qeq.cpp.i: cmake_force
@@ -419,7 +443,7 @@ CMakeFiles/main.dir/qf/qf_qeq.cpp.o.provides.build: CMakeFiles/main.dir/qf/qf_qe
 
 CMakeFiles/main.dir/qf/qf_qmact.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qf_qmact.cpp.o: qf/qf_qmact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/main.dir/qf/qf_qmact.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/main.dir/qf/qf_qmact.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qf_qmact.cpp.o -c /home/jimmy/qm/qf/qf_qmact.cpp
 
 CMakeFiles/main.dir/qf/qf_qmact.cpp.i: cmake_force
@@ -443,7 +467,7 @@ CMakeFiles/main.dir/qf/qf_qmact.cpp.o.provides.build: CMakeFiles/main.dir/qf/qf_
 
 CMakeFiles/main.dir/qf/qf_time.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/qf/qf_time.cpp.o: qf/qf_time.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/main.dir/qf/qf_time.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/main.dir/qf/qf_time.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/qf/qf_time.cpp.o -c /home/jimmy/qm/qf/qf_time.cpp
 
 CMakeFiles/main.dir/qf/qf_time.cpp.i: cmake_force
@@ -468,6 +492,7 @@ CMakeFiles/main.dir/qf/qf_time.cpp.o.provides.build: CMakeFiles/main.dir/qf/qf_t
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
+"CMakeFiles/main.dir/include/Monitor.cpp.o" \
 "CMakeFiles/main.dir/include/Sensors.cpp.o" \
 "CMakeFiles/main.dir/include/bsp.cpp.o" \
 "CMakeFiles/main.dir/include/qstamp.cpp.o" \
@@ -489,6 +514,7 @@ main_OBJECTS = \
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
+main: CMakeFiles/main.dir/include/Monitor.cpp.o
 main: CMakeFiles/main.dir/include/Sensors.cpp.o
 main: CMakeFiles/main.dir/include/bsp.cpp.o
 main: CMakeFiles/main.dir/include/qstamp.cpp.o
@@ -507,7 +533,7 @@ main: CMakeFiles/main.dir/qf/qf_qmact.cpp.o
 main: CMakeFiles/main.dir/qf/qf_time.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jimmy/qm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -516,6 +542,7 @@ CMakeFiles/main.dir/build: main
 .PHONY : CMakeFiles/main.dir/build
 
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/main.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/include/Monitor.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/include/Sensors.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/include/bsp.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/include/qstamp.cpp.o.requires

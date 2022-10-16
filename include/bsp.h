@@ -35,7 +35,10 @@
 
 enum BlinkySignals {
     TIMEOUT_SIG = QP::Q_USER_SIG, // offset the first signal
-    NEXT_SIG,
+    ONE_SIG,
+    TWO_SIG,
+    INPUT_SIG,
+    MAX_PUB_SIG,
     MAX_SIG
 };
 
@@ -44,5 +47,20 @@ class BSP {
 public:
     static void init(void);
 };
+
+//$declare${Evts} vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+//${Evts::SensorsEvt} ........................................................
+class SensorsEvt : public QP::QEvt {
+public:
+    std::uint8_t KeyCode;
+}; // class SensorsEvt
+
+//${Evts::AO_Monitor} ........................................................
+extern QP::QActive * const AO_Monitor;
+
+//${Evts::AO_Sensors} ........................................................
+extern QP::QActive * const AO_Sensors;
+//$enddecl${Evts} ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #endif // BSP_HPP

@@ -30,6 +30,8 @@
 //$endhead${./include::bsp.cpp} ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #include "qpcpp.hpp"  // QP/C++ framework API
 #include "bsp.h"    // Board Support Package interface
+#include "Sensors.h"
+#include "Monitor.h"
 #include <iostream>   // for cout/cerr
 #include <cstdlib>    // for exit()
 #include <chrono>
@@ -54,3 +56,19 @@ void Q_onAssert(char const * const module, int loc) {
     cerr << "Assertion failed in " <<  module << ":" << loc << endl;
     exit(-1);
 }
+
+//$skip${QP_VERSION} vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+// Check for the minimum required QP version
+#if (QP_VERSION < 690U) || (QP_VERSION != ((QP_RELEASE^4294967295U) % 0x3E8U))
+#error qpcpp version 6.9.0 or higher required
+#endif
+//$endskip${QP_VERSION} ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+//$define${Evts} vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+//${Evts::AO_Monitor} ........................................................
+QP::QActive * const AO_Monitor = &Monitor::instance;
+
+//${Evts::AO_Sensors} ........................................................
+QP::QActive * const AO_Sensors = &Sensors::instance;
+//$enddef${Evts} ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

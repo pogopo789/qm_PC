@@ -5,46 +5,78 @@
   <class name="Sensors" superclass="qpcpp::QActive">
    <attribute name="tim" type="QP::QTimeEvt" visibility="0x02" properties="0x00"/>
    <attribute name="instance" type="Sensors" visibility="0x00" properties="0x01"/>
-   <attribute name="evt" type="QP::QEvt" visibility="0x00" properties="0x00"/>
    <operation name="Sensors" type="" visibility="0x00" properties="0x00">
-    <code>  : QActive(Q_STATE_CAST(&amp;Sensors::initial)),
+    <code>  : QActive(&amp;initial),
     tim(this, TIMEOUT_SIG, 0U)</code>
    </operation>
    <statechart properties="0x02">
     <initial target="../1">
-     <action>tim.armX(100,100);</action>
-     <initial_glyph conn="40,7,4,0,4">
+     <action>//subscribe(ONE_SIG);
+tim.armX(100,100);</action>
+     <initial_glyph conn="39,20,4,0,6">
       <action box="0,-2,10,2"/>
      </initial_glyph>
     </initial>
     <state name="GetData1">
-     <entry brief="PRINT TIME">std::cout&lt;&lt;&quot;Hi&quot;&lt;&lt;std::endl;
-instance.evt={NEXT_SIG};
-Sensors_ptr-&gt;postLIFO(&amp;instance.evt);</entry>
-     <tran trig="NEXT" target="../../2">
-      <tran_glyph conn="38,39,2,0,4">
-       <action box="2,1,10,2"/>
+     <entry brief="PRINT TIME">//std::cout&lt;&lt;&quot;ONE IS PRINTED&quot;&lt;&lt;std::endl;
+//SensorsEvt *ptr = Q_NEW(SensorsEvt,ONE_SIG);
+//AO_Sensors-&gt;POST(ptr,this);</entry>
+     <tran trig="TIMEOUT">
+      <action>std::cout&lt;&lt;&quot;SENSORS PRINTED&quot;&lt;&lt;std::endl;
+//SensorsEvt *ptr = Q_NEW(SensorsEvt,TIMEOUT_SIG);
+//QP::QActive::PUBLISH(ptr, this);</action>
+      <tran_glyph conn="24,41,3,-1,15">
+       <action box="0,-2,10,2"/>
       </tran_glyph>
      </tran>
-     <state_glyph node="23,11,29,28">
+     <state_glyph node="24,26,29,28">
       <entry box="1,2,6,2"/>
      </state_glyph>
     </state>
-    <state name="GetData2">
-     <entry brief="PRINT TIME">std::cout&lt;&lt;&quot;Halo&quot;&lt;&lt;std::endl;</entry>
-     <tran trig="TIMEOUT" target="../../1">
-      <tran_glyph conn="53,55,1,1,13,-35,-14">
-       <action box="4,-5,10,2"/>
-      </tran_glyph>
-     </tran>
-     <state_glyph node="23,43,30,25">
-      <entry box="1,2,6,2"/>
-     </state_glyph>
-    </state>
-    <state_diagram size="87,80"/>
+    <state_diagram size="77,80"/>
    </statechart>
   </class>
-  <attribute name="Sensors_ptr" type="QP::QActive * const" visibility="0x00" properties="0x00">
+  <class name="Monitor" superclass="qpcpp::QActive">
+   <attribute name="instance" type="Monitor" visibility="0x00" properties="0x01"/>
+   <attribute name="tim" type="QP::QTimeEvt" visibility="0x02" properties="0x00"/>
+   <operation name="Monitor" type="" visibility="0x00" properties="0x00">
+    <code>  : QActive(&amp;initial),
+    tim(this, TIMEOUT_SIG, 0U)</code>
+   </operation>
+   <statechart properties="0x00">
+    <initial target="../1">
+     <action>subscribe(TIMEOUT_SIG);
+tim.armX(150,100);</action>
+     <initial_glyph conn="40,3,4,0,7">
+      <action box="0,-2,10,2"/>
+     </initial_glyph>
+    </initial>
+    <state name="Input">
+     <entry>std::cout&lt;&lt;&quot;MONITOR INPUT&quot;&lt;&lt;std::endl;</entry>
+     <tran trig="TIMEOUT">
+      <action>std::cout&lt;&lt;&quot;MONITOR PRINTED&quot;&lt;&lt;std::endl;
+//SensorsEvt *ptr = Q_NEW(SensorsEvt,ONE_SIG);
+//AO_Sensors-&gt;POST(ptr,this);</action>
+      <tran_glyph conn="30,18,3,-1,7">
+       <action box="0,-2,10,2"/>
+      </tran_glyph>
+     </tran>
+     <state_glyph node="30,10,20,16">
+      <entry box="1,2,6,2"/>
+     </state_glyph>
+    </state>
+    <state_diagram size="78,50"/>
+   </statechart>
+  </class>
+ </package>
+ <package name="Evts" stereotype="0x00">
+  <class name="SensorsEvt" superclass="qpcpp::QEvt">
+   <attribute name="KeyCode" type="std::uint8_t" visibility="0x00" properties="0x00"/>
+  </class>
+  <attribute name="AO_Monitor" type="QP::QActive * const" visibility="0x00" properties="0x00">
+   <code>= &amp;Monitor::instance;</code>
+  </attribute>
+  <attribute name="AO_Sensors" type="QP::QActive * const" visibility="0x00" properties="0x00">
    <code>= &amp;Sensors::instance;</code>
   </attribute>
  </package>
@@ -57,7 +89,10 @@ Sensors_ptr-&gt;postLIFO(&amp;instance.evt);</entry>
 
 enum BlinkySignals {
     TIMEOUT_SIG = QP::Q_USER_SIG, // offset the first signal
-    NEXT_SIG,
+    ONE_SIG,
+    TWO_SIG,
+    INPUT_SIG,
+    MAX_PUB_SIG,
     MAX_SIG
 };
 
@@ -67,11 +102,15 @@ public:
     static void init(void);
 };
 
+$declare${Evts}
+
 #endif // BSP_HPP</text>
   </file>
   <file name="bsp.cpp">
    <text>#include &quot;qpcpp.hpp&quot;  // QP/C++ framework API
 #include &quot;bsp.h&quot;    // Board Support Package interface
+#include &quot;Sensors.h&quot;
+#include &quot;Monitor.h&quot;
 #include &lt;iostream&gt;   // for cout/cerr
 #include &lt;cstdlib&gt;    // for exit()
 #include &lt;chrono&gt;
@@ -95,7 +134,9 @@ void QF::onClockTick(void) {
 void Q_onAssert(char const * const module, int loc) {
     cerr &lt;&lt; &quot;Assertion failed in &quot; &lt;&lt;  module &lt;&lt; &quot;:&quot; &lt;&lt; loc &lt;&lt; endl;
     exit(-1);
-}</text>
+}
+
+$define${Evts}</text>
   </file>
   <file name="Sensors.cpp">
    <text>#include &quot;qpcpp.hpp&quot;  // QP/C++ framework API
@@ -105,15 +146,29 @@ void Q_onAssert(char const * const module, int loc) {
 #include &lt;chrono&gt;
 #include &quot;Sensors.h&quot;
 
-$define${AOs::Sensors_ptr}
 $define${AOs::Sensors}</text>
   </file>
   <file name="Sensors.h">
    <text>#pragma once
 #include &lt;chrono&gt;
 
-$declare${AOs::Sensors_ptr}
 $declare${AOs::Sensors}</text>
+  </file>
+  <file name="Monitor.cpp">
+   <text>#include &quot;qpcpp.hpp&quot;  // QP/C++ framework API
+#include &quot;bsp.h&quot;    // Board Support Package interface
+#include &lt;iostream&gt;   // for cout/cerr
+#include &lt;cstdlib&gt;    // for exit()
+#include &lt;chrono&gt;
+#include &quot;Monitor.h&quot;
+
+$define${AOs::Monitor}</text>
+  </file>
+  <file name="Monitor.h">
+   <text>#pragma once
+#include &lt;chrono&gt;
+
+$declare${AOs::Monitor}</text>
   </file>
  </directory>
 </model>

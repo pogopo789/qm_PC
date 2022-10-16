@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.cpp.o"
+  "CMakeFiles/main.dir/include/Monitor.cpp.o"
   "CMakeFiles/main.dir/include/Sensors.cpp.o"
   "CMakeFiles/main.dir/include/bsp.cpp.o"
   "CMakeFiles/main.dir/include/qstamp.cpp.o"

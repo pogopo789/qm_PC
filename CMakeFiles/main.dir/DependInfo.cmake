@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/jimmy/qm/include/Monitor.cpp" "/home/jimmy/qm/CMakeFiles/main.dir/include/Monitor.cpp.o"
   "/home/jimmy/qm/include/Sensors.cpp" "/home/jimmy/qm/CMakeFiles/main.dir/include/Sensors.cpp.o"
   "/home/jimmy/qm/include/bsp.cpp" "/home/jimmy/qm/CMakeFiles/main.dir/include/bsp.cpp.o"
   "/home/jimmy/qm/include/qstamp.cpp" "/home/jimmy/qm/CMakeFiles/main.dir/include/qstamp.cpp.o"

@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/MAIN.dir/main.cpp.o  -o MAIN  -L/home/jimmy/qm/include  -L/home/jimmy/qm/qf  -L/home/jimmy/qm/qv -Wl,-rpath,/home/jimmy/qm/include:/home/jimmy/qm/qf:/home/jimmy/qm/qv -linclude 
